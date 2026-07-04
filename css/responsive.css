@@ -1,0 +1,111 @@
+/* ==========================================================================
+   Responsive CSS
+   ========================================================================== */
+
+/* Desktop / Laptop - Adjustments (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .product-grid {
+        gap: 20px;
+    }
+
+    .strengths-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+        gap: 20px;
+    }
+    
+    .gallery-news-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-column {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 250px;
+    }
+}
+
+/* Tablet (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2.2rem; }
+    
+    .section {
+        padding: 80px 0;
+    }
+
+    /* Header */
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: var(--color-white);
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+        transition: right 0.4s ease;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Grids */
+    .product-grid,
+    .team-layout,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .gallery-column {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 250px);
+    }
+
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .stats-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-cta .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+    
+    .section {
+        padding: 60px 0;
+    }
+
+    .strengths-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-badge {
+        width: 100%;
+    }
+}

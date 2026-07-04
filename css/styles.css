@@ -275,7 +275,8 @@ img {
 .secondary-links a {
     font-size: 0.85rem;
     color: #8A6C58;
-    font-weight: 500;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
 }
 
 .social-links-nav {
@@ -296,10 +297,9 @@ img {
 }
 
 .main-nav {
-    width: 100%;
     display: flex;
     justify-content: flex-end;
-    border-top: 1px solid rgba(44, 24, 16, 0.1); /* Thin divider */
+    border-top: 1px solid rgba(44, 24, 16, 0.15); /* Thin divider */
     padding-top: 10px;
 }
 
@@ -311,8 +311,9 @@ img {
 }
 
 .nav-links > li > a {
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 400;
+    font-family: Arial, sans-serif;
     color: #4A2B1D;
     text-transform: uppercase;
     letter-spacing: 0.5px;

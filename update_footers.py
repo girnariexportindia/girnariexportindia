@@ -4,6 +4,7 @@ new_footer = """    <!-- Footer -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-col contact-col">
+                <img src="images/logo.png" alt="Girnari Export Logo" style="height: 180px; width: auto; margin-bottom: 20px; transform: scale(1.2); transform-origin: left center;">
                 <h3>CONTACT</h3>
                 <p>Girnari Export,<br>
                 Ahmedabad,<br>

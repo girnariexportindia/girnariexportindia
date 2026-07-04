@@ -138,22 +138,43 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
 
-            // Simulate API call to Formspree
-            setTimeout(() => {
-                formStatus.innerText = 'Message sent successfully! We will get back to you soon.';
-                formStatus.style.color = 'green';
-                contactForm.reset();
-                
+            const formData = new FormData(contactForm);
+            
+            fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.innerText = 'Message sent successfully! We will get back to you soon.';
+                    formStatus.style.color = 'green';
+                    contactForm.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            formStatus.innerText = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            formStatus.innerText = 'Oops! There was a problem submitting your form';
+                        }
+                        formStatus.style.color = 'red';
+                    });
+                }
+            })
+            .catch(error => {
+                formStatus.innerText = 'Oops! There was a problem submitting your form';
+                formStatus.style.color = 'red';
+            })
+            .finally(() => {
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
                 
-                // Clear success message after 5 seconds
                 setTimeout(() => {
                     formStatus.innerText = '';
                 }, 5000);
-            }, 1500);
-            
-            // Note: In real implementation, you would use fetch() to submit to Formspree
+            });
         });
     }
 });

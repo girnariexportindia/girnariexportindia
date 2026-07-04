@@ -77,15 +77,14 @@
             .then(svg => document.getElementById('svg-sprite-container').innerHTML = svg);
     </script>
 
-        <!-- Navigation Bar -->
+            <!-- Navigation Bar -->
     <header class="site-header" id="header">
         <div class="container nav-container">
             <!-- Left: Logo Badge -->
-            <a href="index.html" class="logo-badge-container" aria-label="Home" style="display: flex; align-items: center; gap: 15px;">
+            <a href="index.html" class="logo-badge-container flex-center-gap-15" aria-label="Home">
                 <div class="logo-badge">
                     <span class="logo-letter">G</span>
                 </div>
-                <span style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-heading);">Girnari Export</span>
             </a>
             
             <!-- Center/Right: Two tiers -->
@@ -98,6 +97,7 @@
                     <div class="social-links-nav">
                         <a href="#" aria-label="Facebook"><svg><use href="#icon-facebook"></use></svg></a>
                         <a href="#" aria-label="Instagram"><svg><use href="#icon-instagram"></use></svg></a>
+                        <a href="#" aria-label="YouTube"><svg><use href="#icon-youtube"></use></svg></a>
                         <a href="#" aria-label="LinkedIn"><svg><use href="#icon-linkedin"></use></svg></a>
                     </div>
                 </div>
@@ -105,9 +105,24 @@
                     <ul class="nav-links">
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="about.html">ABOUT</a></li>
-                        <li><a href="products.html">PRODUCTS</a></li>
+                        <li class="dropdown">
+                            <a href="#">BRANDS <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px; display: inline-block; vertical-align: middle; transform: translateY(-1px);"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Brand 1</a></li>
+                                <li><a href="#">Brand 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">SERVICES <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px; display: inline-block; vertical-align: middle; transform: translateY(-1px);"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Service 1</a></li>
+                                <li><a href="#">Service 2</a></li>
+                            </ul>
+                        </li>
                         <li><a href="certifications.html">CERTIFICATIONS</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="#">CAREERS</a></li>
+                        <li><a href="#">NEWS & EVENTS</a></li>
+                        <li><a href="#">FAQ</a></li>
                     </ul>
                 </nav>
             </div>
@@ -131,26 +146,152 @@
         <div class="container hero-content">
             <h1 class="fade-in-up">Premium Onion Powder, Exported with Integrity</h1>
             <p class="fade-in-up delay-1">Every batch tested. Every shipment certified. Sourced from Gujarat, delivered worldwide.</p>
-            <div class="fade-in-up delay-2" style="display: flex; gap: 15px;">
+            <div class="fade-in-up delay-2 flex-gap-15">
                 <a href="products.html" class="btn btn-primary">Explore Our Products</a>
                 <a href="contact.html" class="btn btn-outline" style="color: var(--color-white); border-color: var(--color-white);">Request a Quote</a>
             </div>
         </div>
     </section>
 
-    <!-- Introduction Section -->
+    <!-- What We Offer Section -->
     <section class="section">
         <div class="container">
-            <div class="section-header text-center fade-in-up">
-                <h2>Welcome to Girnari Export</h2>
+            <div class="text-center fade-in-up">
+                <svg style="width:24px; height:24px; color:#5D9530; margin-bottom:15px;"><use href="#icon-leaf"></use></svg>
+                <p style="text-transform:uppercase; font-size:0.8rem; font-weight:600; color:#8A6C58; letter-spacing:1px; margin-bottom:10px;">WELCOME TO GIRNARI EXPORT</p>
+                <h2 style="font-size:2.5rem; margin-bottom:25px; font-weight:400;">WHAT WE OFFER</h2>
+                <div class="max-w-800 mx-auto" style="color: var(--color-text-light); font-size: 0.95rem; line-height: 1.8;">
+                    <p class="mb-15">With deep knowledge of taste, tradition, and market needs, we specialize in sourcing, processing, and crafting premium onion powders. From bulk supply to private-label solutions and global brands, we deliver with reliability, integrity, and excellence.</p>
+                    <p>Girnari Export proudly presents White, Red, and Pink—globally recognized varieties offering premium Indian-origin quality. Each batch is packed in innovative, high-quality packaging to ensure freshness and appeal to modern culinary experts worldwide.</p>
+                </div>
             </div>
-            <div class="text-center fade-in-up delay-1" style="max-width: 800px; margin: 0 auto;">
-                <p style="margin-bottom: 20px;">At Girnari Export, quality isn't a claim we put on a website — it's a process we follow on every single batch. Based in Ahmedabad, Gujarat, we source our onions directly from the region's growing belt and process them close to source, keeping the supply chain short and quality control tight from farm to finished powder.</p>
-                <p style="margin-bottom: 20px;">Before any shipment leaves our facility, every batch is sent for independent testing and certification — checking moisture, purity, and consistency so what reaches you matches exactly what left us. Our operations are led by professionals with formal vocational training in the field, and we hold the certifications required for international export.</p>
-                <p style="margin-bottom: 30px;">We currently specialize in White, Red, and Pink onion powder — and we're actively expanding. If there's a product you need that isn't listed here yet, reach out. It may already be part of where we're headed next.</p>
-                
-                <a href="products.html" class="btn btn-outline" style="margin-right: 15px;">Explore our premium onion powder varieties</a>
-                <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+
+            <div class="offer-cards fade-in-up delay-1 mt-50">
+                <!-- Card 1 -->
+                <div class="offer-card" style="background-image: url('images/gallery_1.png');">
+                    <div class="offer-card-content">
+                        <div class="offer-card-title-row">
+                            <h3>Our Varieties</h3>
+                            <a href="products.html" class="offer-arrow" aria-label="Our Varieties"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                        <p>White, Red, and Pink options—blends rooted in heritage, crafted for culinary lovers.</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="offer-card" style="background-image: url('images/gallery_2.png');">
+                    <div class="offer-card-content">
+                        <div class="offer-card-title-row">
+                            <h3>Private Labels</h3>
+                            <a href="contact.html" class="offer-arrow" aria-label="Private Labels"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                        <p>Custom packaging and sourcing—crafted to your vision, delivered with quality and global reach.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="offer-card" style="background-image: url('images/premium_bg.png');">
+                    <div class="offer-card-content">
+                        <div class="offer-card-title-row">
+                            <h3>Bulk Export</h3>
+                            <a href="contact.html" class="offer-arrow" aria-label="Bulk Export"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                        </div>
+                        <p>Bulk onion powder, expertly sourced and graded—trusted by brands for quality, scale, and consistency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section bg-white text-center">
+        <div class="container">
+            <h2 style="font-size: 1.8rem; font-weight: 500; color: #4A2B1D; text-transform: uppercase; margin-bottom: 20px; line-height: 1.4;">WE ARE CONTINUOUSLY COMMITTED TO<br>GLOBAL QUALITY STANDARDS</h2>
+            <div class="max-w-800 mx-auto mb-50" style="color: var(--color-text-light); font-size: 0.95rem; line-height: 1.8;">
+                <p>At Girnari Export, we align our practices with global standards in quality, safety, sustainability, and ethics. Our certified processes ensure every batch meets the highest benchmarks of purity, consistency, and trust.</p>
+            </div>
+            
+            <div class="cert-logos-grid fade-in-up" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; align-items: center; max-width: 1000px; margin: 0 auto;">
+                <div class="cert-logo-placeholder"><span>FSSAI</span><p>Food Safety</p></div>
+                <div class="cert-logo-placeholder"><span>FDA</span><p>Approved</p></div>
+                <div class="cert-logo-placeholder"><span>ISO 22000</span><p>Certified</p></div>
+                <div class="cert-logo-placeholder"><span>HACCP</span><p>Certified</p></div>
+                <div class="cert-logo-placeholder"><span>GMP</span><p>Certified</p></div>
+                <div class="cert-logo-placeholder"><span>HALAL</span><p>Certified</p></div>
+                <div class="cert-logo-placeholder"><span>KOSHER</span><p>Certified</p></div>
+                <div class="cert-logo-placeholder"><span>APEDA</span><p>Member</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Strengths Section -->
+    <section class="section" style="background-color: #FDF9F1; position: relative; overflow: hidden;">
+        <!-- Abstract background shapes -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; top:-20%; left:-10%; width:40%; height:80%; fill:none; stroke:#EAE0D5; stroke-width:0.5;"><path d="M0,50 Q25,20 50,50 T100,50" /></svg>
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; top:20%; right:-10%; width:30%; height:60%; fill:#E9F0E6; opacity:0.7;"><path d="M10,0 Q50,20 80,60 T100,100 L100,0 Z" /></svg>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="text-center fade-in-up">
+                <svg style="width:24px; height:24px; color:#5D9530; margin-bottom:15px;"><use href="#icon-leaf"></use></svg>
+                <p style="text-transform:uppercase; font-size:0.8rem; font-weight:600; color:#8A6C58; letter-spacing:1px; margin-bottom:10px;">DISCOVER GIRNARI EXPORT</p>
+                <h2 style="font-size:2.5rem; margin-bottom:50px; font-weight:400;">OUR STRENGTHS</h2>
+            </div>
+            
+            <div class="strengths-grid fade-in-up delay-1">
+                <div class="strength-card">
+                    <div class="strength-header">
+                        <div class="strength-icon"><svg><use href="#icon-leaf"></use></svg></div>
+                        <h3>Deep Agricultural Roots</h3>
+                    </div>
+                    <div class="strength-content">
+                        <p>Three generations of agricultural expertise shape our onion sourcing—crafted with tradition, passion, and deep knowledge.</p>
+                    </div>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-header">
+                        <div class="strength-icon"><svg><use href="#icon-star"></use></svg></div>
+                        <h3>Expert Processing Team</h3>
+                    </div>
+                    <div class="strength-content">
+                        <p>Our skilled team handles every stage—from sourcing to market—with precision, care, and an unwavering focus on quality.</p>
+                    </div>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-header">
+                        <div class="strength-icon"><svg><use href="#icon-cog"></use></svg></div>
+                        <h3>Modern Infrastructure</h3>
+                    </div>
+                    <div class="strength-content">
+                        <p>Equipped with advanced processing technology, our facility ensures maximum efficiency, consistency, and world-class production standards.</p>
+                    </div>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-header">
+                        <div class="strength-icon"><svg><use href="#icon-truck"></use></svg></div>
+                        <h3>Comprehensive Export Solutions</h3>
+                    </div>
+                    <div class="strength-content">
+                        <p>We deliver end-to-end services, from custom blends to global-ready packaging, tailored perfectly to international market needs.</p>
+                    </div>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-header">
+                        <div class="strength-icon"><svg><use href="#icon-shield"></use></svg></div>
+                        <h3>Quality Assurance</h3>
+                    </div>
+                    <div class="strength-content">
+                        <p>Every single batch meets the highest global standards of quality, safety, and purity—independently verified and guaranteed.</p>
+                    </div>
+                </div>
+                <div class="strength-card">
+                    <div class="strength-header">
+                        <div class="strength-icon"><svg><use href="#icon-price"></use></svg></div>
+                        <h3>Empowering Communities</h3>
+                    </div>
+                    <div class="strength-content">
+                        <p>We support local farming communities across Gujarat, focusing on sustainable agricultural practices and impactful, long-term initiatives.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -222,7 +363,7 @@
                             </li>
                         </ul>
                         <div class="mt-4 text-center">
-                            <a href="about.html" style="color:var(--color-accent); font-weight:600;">Learn more about our company story &rarr;</a>
+                            <a href="about.html" class="text-accent-bold">Learn more about our company story &rarr;</a>
                         </div>
                     </div>
                 </div>
@@ -230,37 +371,79 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="container footer-grid">
-            <div class="footer-col brand-col">
-                <a href="index.html" class="footer-logo">
-                    <span class="logo-accent">Girnari</span> Export
-                </a>
-                <p>Certified onion powder, sourced and processed in Gujarat — bringing tested quality to kitchens worldwide.</p>
-            </div>
-            <div class="footer-col links-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="certifications.html">Certifications</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col contact-col">
-                <h3>Contact Info</h3>
-                <p>Email: info@girnariexport.com</p>
-                <p>Phone: +91 98765 43210</p>
-                <div class="social-links mt-2">
-                    <a href="#" aria-label="LinkedIn"><svg width="24" height="24"><use href="#icon-linkedin"></use></svg></a>
-                    <a href="#" aria-label="Facebook"><svg width="24" height="24"><use href="#icon-facebook"></use></svg></a>
-                    <a href="#" aria-label="Instagram"><svg width="24" height="24"><use href="#icon-instagram"></use></svg></a>
+    <!-- Contact CTA Section -->
+    <section class="section contact-cta-section" style="background-color: #FDF9F1; position: relative; overflow: hidden; padding: 80px 0;">
+        <!-- Abstract background shapes -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none;">
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; top:-20%; left:-10%; width:40%; height:80%; fill:#F1E5D5; opacity: 0.5;"><path d="M0,50 Q25,20 50,50 T100,50 L0,100 Z" /></svg>
+            <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; bottom:-20%; right:-10%; width:30%; height:60%; fill:#E9F0E6; opacity:0.7;"><path d="M10,100 Q50,80 80,40 T100,0 L100,100 Z" /></svg>
+        </div>
+        
+        <div class="container" style="position: relative; z-index: 1;">
+            <div class="contact-cta-card fade-in-up">
+                <div class="contact-cta-image" style="background-image: url('images/gallery_1.png');"></div>
+                <div class="contact-cta-content">
+                    <svg style="width:28px; height:28px; color:#5D9530; margin-bottom:15px;"><use href="#icon-leaf"></use></svg>
+                    <p class="contact-cta-subtitle">CONTACT</p>
+                    <h2>CONNECT WITH US</h2>
+                    <p class="contact-cta-description">We're here to assist with any questions about our onion powders, export services, or how we can support your business. Reach out—our team is ready to help.</p>
+                    <a href="contact.html" class="cta-btn">INQUIRE NOW</a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom text-center">
-            <p>&copy; 2026 Girnari Export. All rights reserved.</p>
+    </section>
+
+        <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col contact-col">
+                <h3>CONTACT</h3>
+                <p>Girnari Export,<br>
+                Ahmedabad,<br>
+                Gujarat, India.</p>
+                <a href="#" class="get-directions"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: text-bottom;"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>Get Directions</a>
+                
+                <div class="contact-details mt-20">
+                    <p>PHONE : (+91) 98765 43210</p>
+                    <p>FAX : (+91) 98765 43210</p>
+                    <p>EMAIL : info@girnariexport.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-col business-col">
+                <h3>BUSINESS HOURS</h3>
+                <div class="business-hours mb-30">
+                    <p>09:00 A.M. TO 5:00 P.M<br><span>Monday to Friday</span></p>
+                    <p class="mt-15">09:00 A.M. TO 2:00 P.M<br><span>Alternate Saturdays</span></p>
+                </div>
+                
+                <h3>FOLLOW US</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"></polygon></svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                </div>
+                
+                <div class="footer-bottom-links mt-20">
+                    <a href="#">Sitemap</a> | <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div class="footer-col links-col">
+                <h3>QUICK LINKS</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">News & Events</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 

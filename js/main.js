@@ -129,51 +129,130 @@ document.addEventListener('DOMContentLoaded', () => {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Basic validation is handled by HTML 'required' attributes
             
-            // Visual feedback (simulating submission)
+            // Clear previous errors
+            const errorTexts = contactForm.querySelectorAll('.error-text');
+            errorTexts.forEach(el => el.innerText = '');
+            const inputs = contactForm.querySelectorAll('input, textarea');
+            inputs.forEach(el => el.classList.remove('input-error'));
+            
+            let isValid = true;
+            
+            const fullName = contactForm.querySelector('[name="fullName"]');
+            const email = contactForm.querySelector('[name="email"]');
+            const phone = contactForm.querySelector('[name="phone"]');
+            const message = contactForm.querySelector('[name="message"]');
+            
+            if (!fullName.value.trim()) {
+                document.getElementById('error-name').innerText = 'Full Name is required.';
+                fullName.classList.add('input-error');
+                isValid = false;
+            }
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim()) {
+                document.getElementById('error-email').innerText = 'Email is required.';
+                email.classList.add('input-error');
+                isValid = false;
+            } else if (!emailRegex.test(email.value.trim())) {
+                document.getElementById('error-email').innerText = 'Please enter a valid email.';
+                email.classList.add('input-error');
+                isValid = false;
+            }
+            
+            if (!phone.value.trim()) {
+                document.getElementById('error-phone').innerText = 'Phone Number is required.';
+                phone.classList.add('input-error');
+                isValid = false;
+            }
+            
+            if (!message.value.trim()) {
+                document.getElementById('error-message').innerText = 'Message is required.';
+                message.classList.add('input-error');
+                isValid = false;
+            }
+            
+            if (!isValid) return;
+            
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerText;
             
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
+            formStatus.className = 'form-status'; // reset
+            formStatus.innerText = '';
 
             const formData = new FormData(contactForm);
             
-            fetch(contactForm.action, {
-                method: contactForm.method,
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
+            const primaryUrl = contactForm.action;
+            const fallbackUrl = 'https://formspree.io/f/mojowkvz';
+            
+            const doFetch = (url, signal) => {
+                return fetch(url, {
+                    method: contactForm.method,
+                    body: formData,
+                    headers: { 'Accept': 'application/json' },
+                    signal: signal
+                });
+            };
+            
+            const abortController = new AbortController();
+            const timeoutId = setTimeout(() => abortController.abort(), 8000);
+            
+            doFetch(primaryUrl, abortController.signal)
             .then(response => {
+                clearTimeout(timeoutId);
                 if (response.ok) {
-                    formStatus.innerText = 'Message sent successfully! We will get back to you soon.';
-                    formStatus.style.color = 'green';
-                    contactForm.reset();
+                    return { success: true };
                 } else {
-                    response.json().then(data => {
-                        if (Object.hasOwn(data, 'errors')) {
-                            formStatus.innerText = data["errors"].map(error => error["message"]).join(", ");
-                        } else {
-                            formStatus.innerText = 'Oops! There was a problem submitting your form';
-                        }
-                        formStatus.style.color = 'red';
+                    console.warn(`Primary Formspree endpoint failed with status ${response.status}, falling back to secondary endpoint`);
+                    return doFetch(fallbackUrl, null).then(fallbackRes => {
+                        return { success: fallbackRes.ok, response: fallbackRes };
                     });
                 }
             })
             .catch(error => {
-                formStatus.innerText = 'Oops! There was a problem submitting your form';
-                formStatus.style.color = 'red';
+                clearTimeout(timeoutId);
+                console.warn(`Primary Formspree endpoint failed (${error.name === 'AbortError' ? 'timeout' : 'network error'}), falling back to secondary endpoint`);
+                return doFetch(fallbackUrl, null).then(fallbackRes => {
+                    return { success: fallbackRes.ok, response: fallbackRes };
+                });
+            })
+            .then(result => {
+                if (result.success) {
+                    formStatus.innerText = "Thank you! Your quote request has been sent. We'll get back to you within 24 hours.";
+                    formStatus.className = 'form-status success';
+                    contactForm.reset();
+                } else {
+                    if (result.response) {
+                        result.response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                formStatus.innerText = data["errors"].map(err => err["message"]).join(", ");
+                            } else {
+                                formStatus.innerText = 'Something went wrong. Please try again or contact us directly.';
+                            }
+                            formStatus.className = 'form-status error';
+                        }).catch(() => {
+                            formStatus.innerText = 'Something went wrong. Please try again or contact us directly.';
+                            formStatus.className = 'form-status error';
+                        });
+                    } else {
+                        formStatus.innerText = 'Something went wrong. Please try again or contact us directly.';
+                        formStatus.className = 'form-status error';
+                    }
+                }
+            })
+            .catch(error => {
+                formStatus.innerText = 'Something went wrong. Please try again or contact us directly.';
+                formStatus.className = 'form-status error';
             })
             .finally(() => {
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
                 
                 setTimeout(() => {
-                    formStatus.innerText = '';
-                }, 5000);
+                    formStatus.className = 'form-status';
+                }, 8000);
             });
         });
     }

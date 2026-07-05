@@ -148,36 +148,41 @@
     <section class="section">
         <div class="container">
             <div class="contact-form-wrapper fade-in-up delay-1">
-                <form action="https://formspree.io/f/xvzjlazy" method="POST" id="contact-form">
-                    <!-- Formspree Config -->
+                <form action="https://formspree.io/f/xvzjlazy" method="POST" id="contact-form" novalidate>
                     <input type="hidden" name="_subject" value="New Quote Request - Girnari Export">
                     <input type="text" name="_gotcha" style="display:none">
                     
                     <div class="form-group">
                         <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company Name</label>
-                        <input type="text" id="company" name="company" placeholder="Acme Corp">
+                        <input type="text" id="name" name="fullName" required placeholder="John Doe">
+                        <span class="error-text" id="error-name"></span>
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address *</label>
                         <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        <span class="error-text" id="error-email"></span>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" name="phone" required placeholder="+1 234 567 8900">
+                        <span class="error-text" id="error-phone"></span>
                     </div>
                     <div class="form-group">
-                        <label for="quantity">Order Quantity (kg/tons)</label>
-                        <input type="text" id="quantity" name="quantity" placeholder="e.g. 500 kg">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Acme Corp">
+                        <span class="error-text" id="error-company"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Estimated Quantity</label>
+                        <input type="text" id="quantity" name="quantity" placeholder="e.g. 500kg">
+                        <span class="error-text" id="error-quantity"></span>
                     </div>
                     <div class="form-group">
                         <label for="message">Message *</label>
                         <textarea id="message" name="message" required placeholder="Tell us about your requirements..."></textarea>
+                        <span class="error-text" id="error-message"></span>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                     <p class="form-status" id="form-status"></p>
                 </form>
             </div>

@@ -108,4 +108,10 @@
     .cert-badge {
         width: 100%;
     }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
 }

@@ -177,4 +177,67 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // --- Hero Slider ---
+    const heroSlider = document.getElementById('hero-slider');
+    if (heroSlider) {
+        const slides = heroSlider.querySelectorAll('.hero-slider-img');
+        const dots = heroSlider.querySelectorAll('.slider-dot');
+        const prevBtn = heroSlider.querySelector('.prev-btn');
+        const nextBtn = heroSlider.querySelector('.next-btn');
+        let currentSlide = 0;
+        let slideInterval;
+
+        const updateSlider = (index) => {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            currentSlide = index;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+        };
+
+        const nextSlide = () => {
+            updateSlider(currentSlide + 1);
+        };
+
+        const prevSlide = () => {
+            updateSlider(currentSlide - 1);
+        };
+
+        const startSlider = () => {
+            slideInterval = setInterval(nextSlide, 5000); // 5 seconds interval
+        };
+
+        const resetSliderInterval = () => {
+            clearInterval(slideInterval);
+            startSlider();
+        };
+
+        if(nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                resetSliderInterval();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                resetSliderInterval();
+            });
+        }
+
+        if(dots) {
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateSlider(index);
+                    resetSliderInterval();
+                });
+            });
+        }
+
+        startSlider();
+    }
 });

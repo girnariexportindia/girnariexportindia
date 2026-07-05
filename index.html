@@ -129,9 +129,11 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="hero-slider">
         <div class="hero-bg">
-            <img src="assets/onion powder in bowl.png" alt="Premium onion powder in a bowl" loading="lazy" width="1920" height="1080">
+            <img src="assets/field image.png" alt="Expansive onion farm field" class="hero-slider-img active" loading="lazy" width="1920" height="1080">
+            <img src="assets/farmer holding onion.png" alt="Farmer holding premium onion" class="hero-slider-img" loading="lazy" width="1920" height="1080">
+            <img src="assets/field drone shot.png" alt="Drone shot of lush onion fields" class="hero-slider-img" loading="lazy" width="1920" height="1080">
         </div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
@@ -141,6 +143,19 @@
                 <a href="products.html" class="btn btn-primary">Explore Our Products</a>
                 <a href="contact.html" class="btn btn-outline" style="color: var(--color-white); border-color: var(--color-white);">Request a Quote</a>
             </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <button class="slider-btn prev-btn" aria-label="Previous Slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="slider-btn next-btn" aria-label="Next Slide">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div class="slider-dots">
+            <button class="slider-dot active" aria-label="Slide 1"></button>
+            <button class="slider-dot" aria-label="Slide 2"></button>
+            <button class="slider-dot" aria-label="Slide 3"></button>
         </div>
     </section>
 
@@ -319,22 +334,8 @@
         <div class="container">
             <h2 style="font-size:2.5rem; margin-bottom:40px; font-weight:700; color: #5D9530; text-transform: capitalize;">How It Is Made</h2>
             
-            <div style="position: relative; width: 100%; max-width: 1200px; margin: 0 auto; padding-bottom: 40px;">
-                <img src="assets/how it is made (1).png" alt="How It Is Made Process" style="width: 100%; height: auto; display: block; border-radius: 8px; mix-blend-mode: multiply;">
-                
-                <svg viewBox="0 0 3840 1116" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
-                    <!-- Step 1 Text -->
-                    <text x="636.5" y="919" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="54" fill="#000000" text-anchor="middle">
-                        <tspan x="636.5" dy="0">Select Premium</tspan>
-                        <tspan x="636.5" dy="70">Quality Of Raw</tspan>
-                        <tspan x="636.5" dy="70">Onion</tspan>
-                    </text>
-            
-                    <!-- Step 3 Text -->
-                    <text x="1808.5" y="919" font-family="system-ui, -apple-system, sans-serif" font-weight="700" font-size="54" fill="#000000" text-anchor="middle">
-                        <tspan x="1808.5" dy="0">Drying</tspan>
-                    </text>
-                </svg>
+            <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding-bottom: 40px;">
+                <img src="assets/how it is made.png" alt="How It Is Made Process" style="width: 100%; height: auto; display: block; border-radius: 8px;">
             </div>
         </div>
     </section>
@@ -410,6 +411,21 @@
                     <li><a href="#">News & Events</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to Top" class="scroll-to-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script defer src="js/main.js"></script>
+</body>
+</html>
                 </ul>
             </div>
         </div>

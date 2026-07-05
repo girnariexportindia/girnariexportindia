@@ -63,9 +63,15 @@
 
     /* Grids */
     .product-grid,
-    .team-layout,
-    .footer-grid {
+    .team-layout {
         grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        /* Force horizontal line on all screen sizes as requested */
+        grid-template-columns: 1.2fr 1fr 1fr 1fr;
+        gap: 15px; /* Reduce gap on small screens so it fits better */
+        overflow-x: auto; /* Add horizontal scroll just in case it overflows on very small devices */
     }
 
     .stats-grid {

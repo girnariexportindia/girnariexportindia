@@ -375,7 +375,7 @@
 
                         <!-- Footer -->
     <footer class="site-footer">
-        <div class="container footer-grid">
+        <div class="container footer-grid" style="display: grid !important; grid-template-columns: 1.2fr 1fr 1fr 1fr !important; gap: 40px !important; align-items: start !important; overflow-x: auto !important;">
             <!-- Column 1: Company Profile -->
             <div class="footer-col">
                 <h3>Company Profile</h3>
@@ -415,13 +415,13 @@
             </div>
             
             <!-- Column 4: Connect Now -->
-            <div class="footer-col">
+            <div class="footer-col" style="min-width: 0;">
                 <h3>Connect Now</h3>
                 <p>Feel free to get in touch with us</p>
                 <form class="footer-form">
-                    <input type="text" placeholder="Phone">
-                    <input type="email" placeholder="Email">
-                    <button type="submit">Send message</button>
+                    <input type="text" placeholder="Phone" style="width: 100% !important; box-sizing: border-box !important;">
+                    <input type="email" placeholder="Email" style="width: 100% !important; box-sizing: border-box !important;">
+                    <button type="submit" style="width: 100% !important; box-sizing: border-box !important;">Send message</button>
                 </form>
             </div>
         </div>

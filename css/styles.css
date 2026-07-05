@@ -205,7 +205,6 @@ img {
     background-color: #FDF8F0; /* Solid cream matching image */
     z-index: 1000;
     transition: var(--transition);
-    border-top: 8px solid #2C1810; /* Dark top bar from image */
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 

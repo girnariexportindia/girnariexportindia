@@ -54,7 +54,7 @@ body::after {
     position: fixed;
     top: 0; left: 0;
     width: 100vw; height: 100vh;
-    background-image: url('../images/premium_bg.png');
+    background-image: url('../images/premium_bg.webp');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -979,7 +979,7 @@ img {
     right: -100px;
     width: 500px;
     height: 500px;
-    background-image: url('../images/premium_bg.png');
+    background-image: url('../images/premium_bg.webp');
     background-size: 800px;
     background-position: right top;
     background-repeat: no-repeat;
@@ -995,7 +995,7 @@ img {
     left: -150px;
     width: 400px;
     height: 400px;
-    background-image: url('../images/premium_bg.png');
+    background-image: url('../images/premium_bg.webp');
     background-size: 800px;
     background-position: left bottom;
     background-repeat: no-repeat;

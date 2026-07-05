@@ -1515,7 +1515,7 @@ img {
    ========================================================================== */
 .site-footer {
     background-color: #EBE3D5; /* Light beige from image */
-    padding: 70px 0 20px;
+    padding: 70px 0 0px;
     color: var(--color-text-light);
     font-size: 0.95rem;
     line-height: 1.8;
@@ -1525,7 +1525,7 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 
 .site-footer h3 {

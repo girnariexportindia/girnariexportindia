@@ -1797,7 +1797,7 @@ img {
     cursor: default;
   }
   .strengths-list li {
-    padding: 20px 0;
+    padding: 15px 0;
     transition: color 0.3s;
   }
   .strengths-fill {

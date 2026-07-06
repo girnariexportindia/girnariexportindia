@@ -468,8 +468,8 @@ if (window.innerWidth >= 900) {
           const tl = gsap.timeline({
             scrollTrigger: {
               trigger: "#our-strengths-section",
-              start: "top top",
-              end: "+=" + listItems.length * 75 + "%",
+              start: "center center",
+              end: "+=" + listItems.length * 100 + "%",
               pin: true,
               scrub: 1.5
             }
@@ -491,7 +491,7 @@ if (window.innerWidth >= 900) {
           });
 
           tl.to(fill, { scaleY: 1, transformOrigin: "top left", ease: "none", duration: tl.duration() }, 0)
-            .to({}, {});
+            .to({}, { duration: 1 });
       }
   }
 }

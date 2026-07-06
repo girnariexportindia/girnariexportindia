@@ -481,12 +481,12 @@ if (window.innerWidth >= 900) {
             const previousItem = listItems[i - 1];
             if (previousItem) {
               tl.set(item, { color: "#C46C49" }, 0.5 * i)
-                .to(slides[i], { autoAlpha: 1, duration: 0.2 }, "<")
+                .fromTo(slides[i], { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: 0.2 }, "<")
                 .set(previousItem, { color: "#8A6C58" }, "<")
-                .to(slides[i - 1], { autoAlpha: 0, duration: 0.2 }, "<");
+                .to(slides[i - 1], { autoAlpha: 0, y: -50, duration: 0.2 }, "<");
             } else {
               gsap.set(item, { color: "#C46C49" });
-              gsap.set(slides[i], { autoAlpha: 1 });
+              gsap.set(slides[i], { autoAlpha: 1, y: 0 });
             }
           });
 

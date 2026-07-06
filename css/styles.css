@@ -1824,6 +1824,11 @@ img {
     visibility: hidden;
     text-align: left;
     max-width: 500px;
+    background-color: var(--color-white);
+    padding: 40px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(74, 84, 70, 0.08);
+    border: 1px solid rgba(93, 149, 48, 0.1);
   }
   .strength-slide svg {
     width: 48px;

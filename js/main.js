@@ -424,3 +424,31 @@ document.addEventListener('DOMContentLoaded', () => {
         startSlider();
     }
 });
+
+    // --- Footer Bouncy Wave ---
+    if (typeof gsap !== \'undefined\' && typeof ScrollTrigger !== \'undefined\') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const down = \'M0-0.3C0-0.3,464,156,1139,156S2278-0.3,2278-0.3V120H0V-0.3z\';
+        const flat = \'M0-0.3C0-0.3,464,0,1139,0S2278-0.3,2278-0.3V120H0V-0.3z\';
+
+        ScrollTrigger.create({
+          trigger: \'.site-footer\',
+          start: \'top bottom\',
+          toggleActions: \'play pause resume reverse\',
+          onEnter: self => {
+            const velocity = self.getVelocity();
+            const variation = Math.min(Math.abs(velocity) / 10000, 0.6);
+
+            gsap.fromTo(\'#bouncy-path\',
+              { attr: { d: down } },
+              {
+                duration: 2,
+                attr: { d: flat },
+                ease: \elastic.out(, )\,
+                overwrite: true
+              }
+            );
+          }
+        });
+    }

@@ -452,3 +452,46 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
     }
+
+
+// --- Pinned Strengths Animation ---
+if (window.innerWidth >= 900) {
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const list = document.querySelector(".strengths-list");
+      const fill = document.querySelector(".strengths-fill");
+      if (list && fill) {
+          const listItems = gsap.utils.toArray("li", list);
+          const slides = gsap.utils.toArray(".strength-slide");
+
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: "#our-strengths-section",
+              start: "top top",
+              end: "+=" + listItems.length * 75 + "%",
+              pin: true,
+              scrub: 1.5
+            }
+          });
+
+          gsap.set(fill, { scaleY: 1 / listItems.length, transformOrigin: "top left" });
+
+          listItems.forEach((item, i) => {
+            const previousItem = listItems[i - 1];
+            if (previousItem) {
+              tl.set(item, { color: "#C46C49" }, 0.5 * i)
+                .to(slides[i], { autoAlpha: 1, duration: 0.2 }, "<")
+                .set(previousItem, { color: "#8A6C58" }, "<")
+                .to(slides[i - 1], { autoAlpha: 0, duration: 0.2 }, "<");
+            } else {
+              gsap.set(item, { color: "#C46C49" });
+              gsap.set(slides[i], { autoAlpha: 1 });
+            }
+          });
+
+          tl.to(fill, { scaleY: 1, transformOrigin: "top left", ease: "none", duration: tl.duration() }, 0)
+            .to({}, {});
+      }
+  }
+}

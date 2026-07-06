@@ -1699,3 +1699,49 @@ img {
     border-color: #d32f2f !important;
     background-color: #fffafaa6 !important;
 }
+
+/* FAB Menu */
+.fab-wrap {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 999;
+}
+.fab {
+  width: 62px;
+  height: 62px;
+  border-radius: 99px;
+  border: none;
+  background: #39FF14;
+  color: #1a1208;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 6px 24px rgba(57, 255, 20, 0.35);
+}
+.fab:hover { filter: brightness(0.95); }
+.fab svg { width: 22px; height: 22px; }
+.fab-item {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 46px;
+  height: 46px;
+  border-radius: 99px;
+  border: 1px solid rgba(57, 255, 20, 0.3);
+  background: #2b2013;
+  color: #f0e6d2;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0);
+  z-index: 1;
+}
+.fab-item:hover { background: #39FF14; color: #1a1208; }
+.fab-item svg { width: 18px; height: 18px; pointer-events: none; }

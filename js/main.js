@@ -257,6 +257,110 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Footer Form Submission & Phone Validation ---
+    const footerForms = document.querySelectorAll('.footer-form');
+    footerForms.forEach(footerForm => {
+        const countrySelect = footerForm.querySelector('.country-code');
+        const phoneInput = footerForm.querySelector('.phone-input') || footerForm.querySelector('input[type="text"]');
+        const emailInput = footerForm.querySelector('.email-input') || footerForm.querySelector('input[type="email"]');
+        const submitBtn = footerForm.querySelector('button[type="submit"]');
+
+        if (countrySelect && phoneInput) {
+            const updateMaxLength = () => {
+                const option = countrySelect.options[countrySelect.selectedIndex];
+                const maxLen = option.dataset.len || 15;
+                phoneInput.maxLength = maxLen;
+            };
+            countrySelect.addEventListener('change', () => {
+                phoneInput.value = '';
+                updateMaxLength();
+            });
+            updateMaxLength();
+            
+            // Allow only numbers in phone input
+            phoneInput.addEventListener('input', (e) => {
+                e.target.value = e.target.value.replace(/\D/g, '');
+            });
+        }
+
+        footerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            if (!phoneInput || !emailInput || !submitBtn) return;
+            
+            if (!phoneInput.value.trim() || !emailInput.value.trim()) {
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Fill all fields';
+                setTimeout(() => submitBtn.innerText = originalText, 2000);
+                return;
+            }
+            
+            if (countrySelect) {
+                const requiredLen = parseInt(countrySelect.options[countrySelect.selectedIndex].dataset.len);
+                if (requiredLen && phoneInput.value.length < (requiredLen - 2)) {
+                    const originalText = submitBtn.innerText;
+                    submitBtn.innerText = 'Invalid Phone';
+                    setTimeout(() => submitBtn.innerText = originalText, 2000);
+                    return;
+                }
+            }
+            
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = new FormData();
+            const fullPhone = countrySelect && countrySelect.value ? `${countrySelect.value} ${phoneInput.value}` : phoneInput.value;
+            formData.append('phone', fullPhone);
+            formData.append('email', emailInput.value);
+            formData.append('_subject', 'New Connection Request from Footer');
+            
+            const primaryUrl = 'https://formspree.io/f/xvzjlazy';
+            const fallbackUrl = 'https://formspree.io/f/mojowkvz';
+            
+            const doFetch = (url, signal) => {
+                return fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' },
+                    signal: signal
+                });
+            };
+            
+            const abortController = new AbortController();
+            const timeoutId = setTimeout(() => abortController.abort(), 8000);
+            
+            doFetch(primaryUrl, abortController.signal)
+            .then(response => {
+                clearTimeout(timeoutId);
+                if (response.ok) return { success: true };
+                return doFetch(fallbackUrl, null).then(res => ({ success: res.ok }));
+            })
+            .catch(error => {
+                clearTimeout(timeoutId);
+                return doFetch(fallbackUrl, null).then(res => ({ success: res.ok }));
+            })
+            .then(result => {
+                if (result.success) {
+                    submitBtn.innerText = 'Sent!';
+                    footerForm.reset();
+                    if (countrySelect && phoneInput) {
+                        const maxLen = countrySelect.options[countrySelect.selectedIndex].dataset.len || 15;
+                        phoneInput.maxLength = maxLen;
+                    }
+                    setTimeout(() => { submitBtn.innerText = originalText; submitBtn.disabled = false; }, 3000);
+                } else {
+                    submitBtn.innerText = 'Error. Try again';
+                    setTimeout(() => { submitBtn.innerText = originalText; submitBtn.disabled = false; }, 3000);
+                }
+            })
+            .catch(() => {
+                submitBtn.innerText = 'Error. Try again';
+                setTimeout(() => { submitBtn.innerText = originalText; submitBtn.disabled = false; }, 3000);
+            });
+        });
+    });
+
     // --- Hero Slider ---
     const heroSlider = document.getElementById('hero-slider');
     if (heroSlider) {

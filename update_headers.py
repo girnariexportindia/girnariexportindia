@@ -35,13 +35,7 @@ new_header = """    <!-- Navigation Bar -->
                     <ul class="nav-links">
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="about.html">ABOUT</a></li>
-                        <li class="dropdown">
-                            <a href="#">SERVICES <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px; display: inline-block; vertical-align: middle; transform: translateY(-1px);"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Service 1</a></li>
-                                <li><a href="#">Service 2</a></li>
-                            </ul>
-                        </li>
+
                         <li><a href="certifications.html">CERTIFICATIONS</a></li>
                         <li><a href="#">CAREERS</a></li>
                         <li><a href="#">NEWS & EVENTS</a></li>

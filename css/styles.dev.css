@@ -59,9 +59,82 @@ body::after {
     background-position: center top;
     background-size: cover;
     z-index: -2;
-    opacity: 0.6;
-    mix-blend-mode: multiply;
-    will-change: transform;
+  .split { opacity: 0; will-change: transform; }
+.split * { will-change: transform; }
+
+.why-choose-gallery {
+  position: relative;
+  width: 100%;
+  height: 640px;
+  overflow: hidden;
+  margin-top: -80px;
+  cursor: grab;
+}
+.why-choose-gallery:active {
+  cursor: grabbing;
+}
+.why-choose-cards {
+  position: absolute;
+  width: 360px;
+  height: 520px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.why-choose-cards .strength-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  transform-origin: center center;
+}
+.drag-proxy {
+  visibility: hidden;
+  position: absolute;
+}
+@media (max-width: 768px) {
+  .why-choose-gallery {
+    height: 550px;
+  }
+  .why-choose-cards {
+    width: 290px;
+    height: 460px;
+  }
+}
+
+.why-choose-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 10;
+}
+.wc-nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent);
+  background-color: transparent;
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.wc-nav-btn:hover {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(93, 149, 48, 0.2);
+}
+.wc-nav-btn:active {
+  transform: translateY(0);
+}
+
     pointer-events: none;
     transform: translateZ(0); /* Hardware acceleration */
 }
@@ -1358,16 +1431,17 @@ img {
 
 .strength-card {
     background-color: var(--color-white);
-    border: 1px solid rgba(138, 108, 88, 0.25);
-    border-radius: 12px;
+    border: 1px solid rgba(93, 149, 48, 0.15);
+    border-radius: var(--radius-lg);
     padding: 40px 30px;
     transition: var(--transition);
+    box-shadow: var(--shadow-sm);
 }
 
 .strength-card:hover {
-    box-shadow: 0 10px 30px rgba(74, 43, 29, 0.08);
+    box-shadow: var(--shadow-md);
     transform: translateY(-5px);
-    border-color: rgba(138, 108, 88, 0.4);
+    border-color: rgba(93, 149, 48, 0.3);
 }
 
 .strength-header {

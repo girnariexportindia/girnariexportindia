@@ -112,59 +112,59 @@
     </header>
 
     <!-- Page Header Section -->
-    <section class="section bg-light pt-150 pb-50">
-        <div class="container text-center">
+    <section class="section pin-panel pt-150 pb-50" style="min-height: 100vh; background-color: #FDF9F1; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; z-index: 1; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('images/premium_bg.webp'); background-size: cover; background-position: center; opacity: 0.15; pointer-events: none; mix-blend-mode: multiply;"></div>
+        
+        <div class="container text-center" style="position: relative; z-index: 2; flex-grow: 1; display: flex; flex-direction: column; justify-content: center;">
             <h1 class="fade-in-up">About Girnari Export</h1>
-            <p class="fade-in-up delay-1 max-w-700 mx-auto text-1-1rem">Bridging Gujarat's agricultural heritage with global quality standards.</p>
+            <p class="fade-in-up delay-1 max-w-700 mx-auto text-1-1rem mb-30">Bridging Gujarat's agricultural heritage with global quality standards.</p>
+            
+            <div class="fade-in-up delay-2" style="display: flex; gap: 15px; justify-content: center; align-items: center; font-size: 0.9rem; font-weight: 500; color: #8A6C58; text-transform: uppercase; letter-spacing: 1px;">
+                <a href="index.html" style="color: #4A2B1D; transition: color 0.3s;">Home</a>
+                <span style="opacity: 0.5;">/</span>
+                <span style="color: var(--color-accent);">About</span>
+            </div>
+        </div>
+
+        <div class="fade-in-up delay-3" style="position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; opacity: 0.7;">
+            <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #8A6C58; margin-bottom: 15px;">Discover Our Story</span>
+            <div style="width: 1px; height: 60px; background: linear-gradient(to bottom, #8A6C58, transparent);"></div>
         </div>
     </section>
 
-    <!-- Company Story & What We Do Section -->
-    <section class="section">
+    <!-- Company Story Section -->
+    <section class="section pin-panel" style="min-height: 100vh; background-color: #ffffff; display: flex; align-items: center; position: relative; z-index: 2; padding: 100px 0;">
         <div class="container">
-            <div class="fade-in-up delay-1 max-w-900 mx-auto">
-                <div class="mb-60">
-                    <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: var(--color-heading);">Our Story</h2>
-                    <p class="mb-15" style="color: var(--color-text-light); font-size: 1.15rem; line-height: 1.8;">Girnari Export was born from a simple belief: that Gujarat's rich agricultural heritage deserves a place on the global table. Named after the iconic Girnar region, known for its fertile soil and generations of farming wisdom, we set out to bridge the gap between India's finest onion harvests and the international markets that demand quality, consistency, and reliability.</p>
-                    <p class="mb-15" style="color: var(--color-text-light); font-size: 1.15rem; line-height: 1.8;">What started as a vision to showcase authentic Gujarati produce has grown into a dedicated export business, built on direct farmer relationships, rigorous processing standards, and an unwavering commitment to purity.</p>
-                </div>
-
-                <div class="mb-60">
-                    <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: var(--color-heading);">What We Do</h2>
-                    <p class="mb-15" style="color: var(--color-text-light); font-size: 1.15rem; line-height: 1.8;">We specialize in premium dehydrated onion powder — a kitchen essential trusted by food manufacturers, spice blenders, restaurants, and distributors worldwide. Our onion powder is processed from handpicked, high-pungency onions grown in Gujarat's ideal climate, known for producing bulbs with superior flavor concentration and natural aroma.</p>
-                    <p class="mb-15" style="color: var(--color-text-light); font-size: 1.15rem; line-height: 1.8;">From cultivation to dehydration to packaging, every step is designed to preserve the natural characteristics that make Indian onions so sought-after — their sharpness, sweetness, and depth of flavor.</p>
+            <div class="fade-in-up delay-1 mx-auto" style="max-width: 1100px; background-color: var(--color-primary-bg); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(93, 149, 48, 0.1);">
+                <div style="display: flex; flex-wrap: wrap; align-items: stretch;">
+                    <div style="flex: 1 1 500px; padding: 60px 50px; display: flex; flex-direction: column; justify-content: center;">
+                        <span style="color: var(--color-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 15px; display: block;">The Beginning</span>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 25px; color: var(--color-heading);">Our Story</h2>
+                        <p class="mb-15" style="color: var(--color-text); font-size: 1.1rem; line-height: 1.8;">Girnari Export was born from a simple belief: that Gujarat's rich agricultural heritage deserves a place on the global table. Named after the iconic Girnar region, known for its fertile soil and generations of farming wisdom, we set out to bridge the gap between India's finest onion harvests and the international markets that demand quality, consistency, and reliability.</p>
+                        <p style="color: var(--color-text); font-size: 1.1rem; line-height: 1.8; margin-bottom: 0;">What started as a vision to showcase authentic Gujarati produce has grown into a dedicated export business, built on direct farmer relationships, rigorous processing standards, and an unwavering commitment to purity.</p>
+                    </div>
+                    <div style="flex: 1 1 400px; min-height: 400px; position: relative;">
+                        <img src="images/gallery_1.webp" alt="Girnar farming fields" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Process Section -->
-    <section class="section bg-light">
+    <!-- What We Do Section -->
+    <section class="section" style="position: relative; z-index: 3; background-color: #ffffff; padding: 100px 0;">
         <div class="container">
-            <div class="section-header text-center fade-in-up">
-                <h2>Our Process</h2>
-                <p>Every step is meticulously designed to preserve nature's best.</p>
-            </div>
-            <div class="strengths-grid fade-in-up delay-1" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                <div class="strength-card" style="text-align: center;">
-                    <div class="icon-wrap mx-auto" style="background-color: var(--color-accent); color: var(--color-white); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin-bottom: 20px;">1</div>
-                    <h3 style="margin-bottom: 15px;">Sourcing</h3>
-                    <p>We work directly with farmers across Gujarat's key onion-growing belts, ensuring fair pricing and consistent quality at the source.</p>
-                </div>
-                <div class="strength-card" style="text-align: center;">
-                    <div class="icon-wrap mx-auto" style="background-color: var(--color-accent); color: var(--color-white); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin-bottom: 20px;">2</div>
-                    <h3 style="margin-bottom: 15px;">Processing</h3>
-                    <p>Onions are cleaned, sliced, and dehydrated using controlled temperature methods that retain flavor, color, and nutritional integrity.</p>
-                </div>
-                <div class="strength-card" style="text-align: center;">
-                    <div class="icon-wrap mx-auto" style="background-color: var(--color-accent); color: var(--color-white); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin-bottom: 20px;">3</div>
-                    <h3 style="margin-bottom: 15px;">Quality Testing</h3>
-                    <p>Each batch undergoes checks for moisture content, particle size, color, and microbial safety before it's cleared for packaging.</p>
-                </div>
-                <div class="strength-card" style="text-align: center;">
-                    <div class="icon-wrap mx-auto" style="background-color: var(--color-accent); color: var(--color-white); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin-bottom: 20px;">4</div>
-                    <h3 style="margin-bottom: 15px;">Packaging & Export</h3>
-                    <p>We package according to international food-grade standards, with customization available for bulk, retail, or private-label requirements.</p>
+            <div class="fade-in-up delay-1 mx-auto" style="max-width: 1100px; background-color: var(--color-primary-bg); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(93, 149, 48, 0.1);">
+                <div style="display: flex; flex-wrap: wrap; align-items: stretch;">
+                    <div style="flex: 1 1 400px; min-height: 400px; position: relative;">
+                        <img src="images/gallery_2.webp" alt="Girnari Export Processing" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div style="flex: 1 1 500px; padding: 60px 50px; display: flex; flex-direction: column; justify-content: center;">
+                        <span style="color: var(--color-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 15px; display: block;">Our Expertise</span>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 25px; color: var(--color-heading);">What We Do</h2>
+                        <p class="mb-15" style="color: var(--color-text); font-size: 1.1rem; line-height: 1.8;">We specialize in premium dehydrated onion powder — a kitchen essential trusted by food manufacturers, spice blenders, restaurants, and distributors worldwide. Our onion powder is processed from handpicked, high-pungency onions grown in Gujarat's ideal climate, known for producing bulbs with superior flavor concentration and natural aroma.</p>
+                        <p style="color: var(--color-text); font-size: 1.1rem; line-height: 1.8; margin-bottom: 0;">From cultivation to dehydration to packaging, every step is designed to preserve the natural characteristics that make Indian onions so sought-after — their sharpness, sweetness, and depth of flavor.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -177,31 +177,71 @@
                 <h2>Why Choose Girnari Export</h2>
                 <p>Delivering on the promise of quality and consistency.</p>
             </div>
-            <div class="strengths-grid">
-                <div class="strength-card fade-in-up">
-                    <div class="icon-wrap"><svg><use href="#icon-leaf"></use></svg></div>
-                    <h3>Direct Farm Sourcing</h3>
-                    <p>No middlemen, ensuring freshness and fair value.</p>
+            
+            <div class="why-choose-gallery">
+                <div class="why-choose-cards">
+                    <div class="strength-card">
+                        <div class="icon-wrap"><svg><use href="#icon-leaf"></use></svg></div>
+                        <h3>Direct Farm Sourcing</h3>
+                        <p>We work directly with farmers across Gujarat's key onion-growing belts, eliminating middlemen from the supply chain. This direct relationship ensures fair pricing for farmers and consistent quality at the source. It also means every batch can be traced back to the fields it came from.</p>
+                    </div>
+                    <div class="strength-card">
+                        <div class="icon-wrap"><svg><use href="#icon-cog"></use></svg></div>
+                        <h3>Consistent Quality</h3>
+                        <p>Every batch of onion powder undergoes rigorous testing for moisture content, particle size, color, and microbial safety before it's cleared for packaging. This standardized process is applied uniformly, batch after batch. The result is a product manufacturers and distributors can rely on to perform the same way every time.</p>
+                    </div>
+                    <div class="strength-card">
+                        <div class="icon-wrap"><svg><use href="#icon-shield"></use></svg></div>
+                        <h3>Global Export Readiness</h3>
+                        <p>Our packaging meets international food-grade standards, built for the demands of cross-border trade. From processing through to export, every step is designed with global compliance in mind. Whether the destination is a food manufacturer, spice blender, or distributor, the product arrives ready for their supply chain.</p>
+                    </div>
+                    <div class="strength-card">
+                        <div class="icon-wrap"><svg><use href="#icon-star"></use></svg></div>
+                        <h3>Customizable Solutions</h3>
+                        <p>We offer flexibility across bulk packaging, private labeling, and tailored specifications to match different business needs. Whether a customer needs large-volume bulk supply or a private-label retail product, our process adapts accordingly. This customization is built into how we package and export, not an afterthought.</p>
+                    </div>
+                    <div class="strength-card">
+                        <div class="icon-wrap"><svg><use href="#icon-price"></use></svg></div>
+                        <h3>Rooted in Tradition</h3>
+                        <p>Girnari Export takes its name from the Girnar region, known for its fertile soil and generations of farming wisdom. That heritage of cultivation knowledge is carried through into every stage of our process today. We combine this traditional agricultural foundation with modern export practices to bring authentic Gujarati produce to global markets.</p>
+                    </div>
                 </div>
-                <div class="strength-card fade-in-up delay-1">
-                    <div class="icon-wrap"><svg><use href="#icon-cog"></use></svg></div>
-                    <h3>Consistent Quality</h3>
-                    <p>Standardized processing across every single batch we produce.</p>
+                <div class="drag-proxy"></div>
+            </div>
+            
+            <div class="why-choose-nav">
+                <button class="wc-nav-btn wc-prev" aria-label="Previous card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="wc-nav-btn wc-next" aria-label="Next card">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center fade-in-up">
+                <h2>Our Process</h2>
+                <p>Every step is meticulously designed to preserve nature's best.</p>
+            </div>
+            <div class="strengths-grid fade-in-up delay-1" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="strength-card" style="text-align: center;">
+                    <div class="icon-wrap mx-auto" style="background-color: var(--color-accent); color: var(--color-white); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin-bottom: 20px;">1</div>
+                    <h3 style="margin-bottom: 15px;">Procurement</h3>
+                    <p>We source premium dehydrated onion powder from trusted suppliers, selecting for consistent quality, color, and flavor concentration before it enters our facility.</p>
                 </div>
-                <div class="strength-card fade-in-up delay-2">
-                    <div class="icon-wrap"><svg><use href="#icon-shield"></use></svg></div>
-                    <h3>Global Export Readiness</h3>
-                    <p>Documentation, compliance, and logistics handled end-to-end.</p>
+                <div class="strength-card" style="text-align: center;">
+                    <div class="icon-wrap mx-auto" style="background-color: var(--color-accent); color: var(--color-white); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin-bottom: 20px;">2</div>
+                    <h3 style="margin-bottom: 15px;">Quality Check</h3>
+                    <p>Every batch undergoes checks for moisture content, particle size, color, and microbial safety to ensure it meets our standards before packaging.</p>
                 </div>
-                <div class="strength-card fade-in-up delay-3">
-                    <div class="icon-wrap"><svg><use href="#icon-star"></use></svg></div>
-                    <h3>Customizable Solutions</h3>
-                    <p>Bulk packaging, private labeling, and tailored specifications.</p>
-                </div>
-                <div class="strength-card fade-in-up delay-4">
-                    <div class="icon-wrap"><svg><use href="#icon-price"></use></svg></div>
-                    <h3>Rooted in Tradition</h3>
-                    <p>Combining Gujarat's farming legacy with modern export practices.</p>
+                <div class="strength-card" style="text-align: center;">
+                    <div class="icon-wrap mx-auto" style="background-color: var(--color-accent); color: var(--color-white); width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.5rem; margin-bottom: 20px;">3</div>
+                    <h3 style="margin-bottom: 15px;">Packaging & Export</h3>
+                    <p>We package according to international food-grade standards, with customization available for bulk, retail, or private-label requirements, and handle export logistics end-to-end.</p>
                 </div>
             </div>
         </div>
@@ -325,6 +365,9 @@
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/Draggable.min.js"></script>
 <script src="js/fab-menu.js"></script>
+<script src="js/about-pinning.js"></script>
+<script src="js/why-choose-slider.js"></script>
 </body>
 </html>

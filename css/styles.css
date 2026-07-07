@@ -1360,7 +1360,7 @@ img {
     background-color: var(--color-white);
     border: 1px solid rgba(138, 108, 88, 0.25);
     border-radius: 12px;
-    padding: 35px 25px;
+    padding: 40px 30px;
     transition: var(--transition);
 }
 
@@ -1391,7 +1391,7 @@ img {
 }
 
 .strength-header h3 {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #4A2B1D;
     margin: 0;
     font-weight: 600;
@@ -1399,7 +1399,7 @@ img {
 }
 
 .strength-content p {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--color-text-light);
     line-height: 1.7;
     margin: 0;
@@ -1823,9 +1823,9 @@ img {
     opacity: 0;
     visibility: hidden;
     text-align: left;
-    max-width: 500px;
+    max-width: 550px;
     background-color: var(--color-white);
-    padding: 40px 40px;
+    padding: 45px 45px;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(74, 84, 70, 0.08);
     border: 1px solid rgba(93, 149, 48, 0.1);

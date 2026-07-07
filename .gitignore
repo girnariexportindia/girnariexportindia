@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.diff
+*_diff.txt
+*.patch
+scratch_*.py
+temp_*.py

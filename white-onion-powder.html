@@ -1,0 +1,568 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>White Onion Powder - Girnari Export</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed": "#301218",
+                      "inverse-primary": "#aecfb3",
+                      "outline-variant": "#c2c8c0",
+                      "on-error-container": "#93000a",
+                      "surface": "#FDFBF7",
+                      "secondary-fixed": "#e4e2de",
+                      "background": "#FDFBF7",
+                      "secondary": "#5e5e5c",
+                      "surface-container": "#eeeeea",
+                      "inverse-on-surface": "#f1f1ed",
+                      "on-primary-fixed-variant": "#314d38",
+                      "tertiary": "#462329",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#e1dfdc",
+                      "on-secondary-container": "#636360",
+                      "surface-container-highest": "#e3e3df",
+                      "text-secondary": "#4B5563",
+                      "on-secondary-fixed-variant": "#474744",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#2f312f",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed-dim": "#eeb9c0",
+                      "secondary-fixed-dim": "#c8c6c3",
+                      "surface-container-low": "#f4f4f0",
+                      "surface-bright": "#faf9f6",
+                      "surface-variant": "#e3e3df",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-container": "#5f393f",
+                      "on-tertiary-container": "#d7a4aa",
+                      "on-background": "#1a1c1a",
+                      "surface-tint": "#48654e",
+                      "primary-fixed-dim": "#aecfb3",
+                      "on-surface": "#1a1c1a",
+                      "outline": "#737972",
+                      "on-secondary-fixed": "#1b1c1a",
+                      "primary-fixed": "#caebce",
+                      "on-primary-fixed": "#04210f",
+                      "text-primary": "#333333",
+                      "primary-container": "#2E4A35",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#99b99e",
+                      "surface-container-high": "#e9e8e5",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#623c42",
+                      "primary": "#2E4A35",
+                      "surface-dim": "#dadad7",
+                      "tertiary-fixed": "#ffd9dd",
+                      "cta-neon": "#39FF14",
+                      "on-surface-variant": "#424842",
+                      "surface-white": "#FFFFFF"
+              },
+              "borderRadius": {
+                      "DEFAULT": "12px",
+                      "lg": "12px",
+                      "xl": "12px",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "card-padding": "40px",
+                      "container-max": "1200px",
+                      "hero-top": "180px",
+                      "grid-gap": "40px",
+                      "section-v": "80px"
+              },
+              "fontFamily": {
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Syne"
+                      ],
+                      "headline-sm": [
+                              "Syne"
+                      ],
+                      "body-default": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Syne"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-bold": [
+                              "16px",
+                              {
+                                      "lineHeight": "1",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "28px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-default": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.8",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "36px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.8",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-1 { transition-delay: 100ms; }
+        .stagger-2 { transition-delay: 200ms; }
+        .stagger-3 { transition-delay: 300ms; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 4px 20px -2px rgba(46, 74, 53, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        @keyframes pulseGlow {
+            0% { transform: scale(1); box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); }
+            50% { transform: scale(1.03); box-shadow: 0 0 25px rgba(57, 255, 20, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); }
+        }
+        .pulse-anim {
+            animation: pulseGlow 4s infinite ease-in-out;
+            transition: transform 0.3s ease;
+        }
+        .pulse-anim:hover {
+            animation-play-state: paused;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(57, 255, 20, 0.5);
+        }
+
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px -10px rgba(46, 74, 53, 0.2);
+        }
+
+        .card-lift-heavy {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-lift-heavy:hover {
+            transform: translateY(-16px) scale(1.01);
+            box-shadow: 0 30px 60px -15px rgba(46, 74, 53, 0.15);
+        }
+
+        .magnetic {
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .parallax-container {
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .parallax-img {
+            will-change: transform;
+            transform-origin: center center;
+        }
+        
+        nav {
+            transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+        }
+    </style>
+
+<link rel="stylesheet" href="css/styles.min.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body class="bg-surface text-on-surface font-body-default antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="site-header" id="header">
+        <div class="container nav-container">
+            <!-- Left: Logo Badge -->
+            <a href="index.html" class="logo-container flex-center-gap-15" aria-label="Home">
+                <img src="images/logo.png" alt="Girnari Export Logo" style="height: 85px; width: auto; transform: scale(1.5); transform-origin: left center;">
+            </a>
+            
+            <!-- Center/Right: Two tiers -->
+            <div class="nav-content">
+                <div class="nav-top">
+                    <ul class="secondary-links">
+                        <li><a href="#">CSR</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                    <div class="social-links-nav">
+                        <a href="#" aria-label="Facebook"><svg><use href="#icon-facebook"></use></svg></a>
+                        <a href="#" aria-label="Instagram"><svg><use href="#icon-instagram"></use></svg></a>
+                        <a href="#" aria-label="YouTube"><svg><use href="#icon-youtube"></use></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg><use href="#icon-linkedin"></use></svg></a>
+                    </div>
+                </div>
+                <nav class="main-nav" id="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="products.html">PRODUCTS</a></li>
+                        <li><a href="certifications.html">CERTIFICATIONS</a></li>
+                        <li><a href="#">CAREERS</a></li>
+                        <li><a href="#">NEWS & EVENTS</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Far Right: Button -->
+            <div class="nav-action">
+                <a href="contact.html" class="btn nav-btn">INQUIRE NOW</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <svg width="24" height="24"><use href="#icon-menu"></use></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+<main class="max-w-container-max mx-auto px-8 w-full pt-hero-top pb-section-v">
+<!-- Hero Section -->
+<section class="fade-in-up text-center mb-section-v">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-6 tracking-wide">White Onion Powder</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mx-auto font-light">The essential culinary cornerstone for premium food processing and flavoring.</p>
+</section>
+<!-- Product Showcase (Bento-ish layout) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-grid-gap mb-section-v items-center">
+<!-- Left: Image -->
+<div class="fade-in-up stagger-1 parallax-container shadow-lg hover-lift bg-surface-white" id="product-parallax">
+<img alt="White Onion Powder in a glass jar" class="w-full h-auto object-cover parallax-img" src="images/gallery_2.webp"/>
+</div>
+<!-- Right: Content -->
+<div class="fade-in-up stagger-2 space-y-8 pl-0 md:pl-8">
+<a class="inline-flex items-center text-primary font-label-bold text-label-bold hover:text-cta-neon transition-colors duration-300 group magnetic" href="products.html">
+<span class="material-symbols-outlined mr-2 group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                    Back to All Products
+                </a>
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mt-2 mb-6 tracking-wide">Exceptional Flavor &amp; Quality</h2>
+<div class="space-y-6 font-body-default text-text-secondary">
+<p>
+                        Our White Onion Powder delivers a sharp, pungent, yet inherently sweet flavor profile. Carefully dehydrated to preserve its natural essential oils, it acts as a potent foundational ingredient, ensuring consistent, robust taste in every application.
+                    </p>
+<p>
+                        Perfectly suited for industrial culinary applications, it effortlessly integrates into complex sauces, hearty soups, and aromatic dry rubs. Its fine consistency guarantees an even distribution of flavor without altering the desired texture of your final product.
+                    </p>
+<p>
+                        Processed in our state-of-the-art, hygienically controlled facilities, every batch is strictly monitored. We utilize advanced optical sorting and sterilization techniques to guarantee uncompromising purity, meeting the stringent demands of global food safety standards.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs -->
+<section class="fade-in-up stagger-1 mb-section-v">
+<div class="rounded-[12px] p-card-padding border-t-2 border-t-cta-neon bg-surface-container-low card-lift-heavy relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-[150px]">science</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-10 relative z-10 text-center tracking-wide">Technical Specifications</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-16 font-body-default text-text-secondary relative z-10">
+<div class="flex items-start border-b border-surface-variant pb-4">
+<span class="material-symbols-outlined text-primary mr-4 mt-1 opacity-70">visibility</span>
+<div class="flex flex-col">
+<span class="font-label-bold text-primary mb-1">Appearance</span>
+<span>Fine White to Off-White Powder</span>
+</div>
+</div>
+<div class="flex items-start border-b border-surface-variant pb-4">
+<span class="material-symbols-outlined text-primary mr-4 mt-1 opacity-70">water_drop</span>
+<div class="flex flex-col">
+<span class="font-label-bold text-primary mb-1">Moisture Content</span>
+<span>&lt; 4.0%</span>
+</div>
+</div>
+<div class="flex items-start border-b border-surface-variant pb-4">
+<span class="material-symbols-outlined text-primary mr-4 mt-1 opacity-70">grain</span>
+<div class="flex flex-col">
+<span class="font-label-bold text-primary mb-1">Granule Size</span>
+<span>100% through 60 mesh</span>
+</div>
+</div>
+<div class="flex items-start border-b border-surface-variant pb-4">
+<span class="material-symbols-outlined text-primary mr-4 mt-1 opacity-70">hourglass_empty</span>
+<div class="flex flex-col">
+<span class="font-label-bold text-primary mb-1">Shelf Life</span>
+<span>12 Months</span>
+</div>
+</div>
+<div class="flex items-start border-b border-surface-variant pb-4">
+<span class="material-symbols-outlined text-primary mr-4 mt-1 opacity-70">inventory_2</span>
+<div class="flex flex-col">
+<span class="font-label-bold text-primary mb-1">Packaging</span>
+<span>25kg Kraft Paper Bags with PE Liner</span>
+</div>
+</div>
+<div class="flex items-start border-b border-surface-variant pb-4">
+<span class="material-symbols-outlined text-primary mr-4 mt-1 opacity-70">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-bold text-primary mb-1">Certifications</span>
+<span class="flex items-center gap-2">
+                                FSSAI, FDA, ISO Compliant
+                                <span class="material-symbols-outlined text-cta-neon text-sm">verified</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA -->
+<section class="fade-in-up stagger-2 text-center py-section-v">
+<a href="contact.html" class="bg-cta-neon text-primary font-headline-sm text-headline-sm py-5 px-12 rounded-full pulse-anim transition-all duration-300 inline-flex items-center gap-4">
+                Inquire About This Product
+                <span class="material-symbols-outlined text-3xl">arrow_forward</span>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="site-footer">
+        <div class="footer-wave">
+          <svg preserveAspectRatio="none" id="footer-wave-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2278 120">
+            <path id="bouncy-path" fill="transparent" d="M0-0.3C0-0.3,464,156,1139,156S2278-0.3,2278-0.3V120H0V-0.3z"/>
+          </svg>
+        </div>
+        <div class="container footer-grid" style="display: grid !important; grid-template-columns: 1.2fr 1fr 1fr 1fr !important; gap: 40px !important; align-items: start !important; overflow-x: auto !important;">
+            <!-- Column 1: Company Profile -->
+            <div class="footer-col">
+                <h3>Company Profile</h3>
+                <p>Welcome to GIRNARI EXPORT.<br>We feel proud to introduce ourselves as leading Manufacturer, supplier and exporter of dehydrated Onions, Garlic, Ginger, Fried onions, Fried garlic, Vegetables powder, fruits powder, Indian spices, seasoning masala and instant soup premix and many more.....</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                    <a href="#" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"></polygon></svg></a>
+                    <a href="#" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5C18.2 1.2 15.2 0 12 0 5.4 0 0 5.4 0 12c0 2.1.5 4.1 1.5 6L0 24l6.1-1.6c1.9 1 3.9 1.5 6 1.5 6.6 0 12-5.4 12-12 0-3.2-1.2-6.2-3.6-8.4zm-8.5 18c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.3-.4C2.5 15.5 2 13.8 2 12 2 6.5 6.5 2 12 2s10 4.5 10 10-4.5 10-10 10zm5.5-7.5c-.3-.1-1.8-.9-2.1-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-1 1.2-.2.2-.4.3-.7.1-1.1-.6-2.1-1.3-3-2.2-.7-.7-1.1-1.5-1.4-2.4-.1-.3 0-.4.2-.6.2-.1.3-.3.5-.5.1-.2.2-.3.4-.5.1-.2 0-.4 0-.5-.1-.3-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7 0 1.6 1.1 3.1 1.3 3.3.2.2 2.3 3.5 5.5 4.9 2.2.9 3.1.9 4 1 .8.1 1.8-.4 2.1-.9.3-.5.3-1 .2-1.1-.1-.1-.3-.2-.6-.4z"></path></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                </div>
+            </div>
+            
+            <!-- Column 2: Explore -->
+            <div class="footer-col">
+                <h3>Explore</h3>
+                <ul class="footer-list">
+                    <li><a href="white-onion-powder.html">Dehydrated White Onions</a></li>
+                    <li><a href="pink-onion-powder.html">Dehydrated Pink Onions</a></li>
+                    <li><a href="red-onion-powder.html">Dehydrated Red Onions</a></li>
+                    <li>Fried Onion</li>
+                    <li>Dehydrated Garlic</li>
+                    <li>Fried Garlic</li>
+                    <li>Vegetables Powder</li>
+                </ul>
+            </div>
+            
+            <!-- Column 3: Quick Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="certifications.html">Quality</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <!-- Column 4: Connect Now -->
+            <div class="footer-col" style="min-width: 0;">
+                <h3>Connect Now</h3>
+                <p>Feel free to get in touch with us</p>
+                <form class="footer-form">
+                    <div style="display: flex; gap: 8px; margin-bottom: 10px;">
+                        <select class="country-code" style="width: 38%; padding: 8px; border: 1px solid rgba(0,0,0,0.1); border-radius: 4px; font-size: 14px; background: #fff; color: #333; outline: none; cursor: pointer;">
+                            <option value="+91" data-len="10">ðŸ‡®ðŸ‡³ +91</option>
+                            <option value="+1" data-len="10">ðŸ‡ºðŸ‡¸ +1</option>
+                            <option value="+44" data-len="10">ðŸ‡¬ðŸ‡§ +44</option>
+                            <option value="+971" data-len="9">ðŸ‡¦ðŸ‡ª +971</option>
+                            <option value="+61" data-len="9">ðŸ‡¦ðŸ‡º +61</option>
+                            <option value="" data-len="15">ðŸŒ Other</option>
+                        </select>
+                        <input type="text" placeholder="Phone" class="phone-input" style="width: 62% !important; margin-bottom: 0 !important; box-sizing: border-box !important;">
+                    </div>
+                    <input type="email" placeholder="Email" class="email-input" style="width: 100% !important; box-sizing: border-box !important;">
+                    <button type="submit" style="width: 100% !important; box-sizing: border-box !important;">Send message</button>
+                </form>
+            </div>
+        </div>
+        
+        </footer>
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Intersection Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            document.querySelectorAll('.fade-in-up').forEach((el) => {
+                observer.observe(el);
+            });
+            
+            // Smooth scroll
+            document.querySelectorAll('footer a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Navbar Scroll Effect
+            const nav = document.getElementById('main-nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    nav.classList.remove('bg-transparent');
+                    nav.classList.add('bg-surface/90', 'backdrop-blur-md', 'shadow-sm');
+                } else {
+                    nav.classList.add('bg-transparent');
+                    nav.classList.remove('bg-surface/90', 'backdrop-blur-md', 'shadow-sm');
+                }
+            });
+
+            // Magnetic Hover Effect
+            const magnetics = document.querySelectorAll('.magnetic');
+            magnetics.forEach(btn => {
+                btn.addEventListener('mousemove', (e) => {
+                    const rect = btn.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+                });
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.transform = `translate(0px, 0px)`;
+                });
+            });
+
+            // Parallax Image Effect
+            const pContainer = document.getElementById('product-parallax');
+            const pImg = pContainer?.querySelector('.parallax-img');
+            
+            if (pContainer && pImg) {
+                pContainer.addEventListener('mousemove', (e) => {
+                    const rect = pContainer.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    
+                    const moveX = (x - centerX) * -0.04;
+                    const moveY = (y - centerY) * -0.04;
+                    
+                    pImg.style.transition = 'none';
+                    pImg.style.transform = `scale(1.05) translate(${moveX}px, ${moveY}px)`;
+                });
+                
+                pContainer.addEventListener('mouseleave', () => {
+                    pImg.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+                    pImg.style.transform = `scale(1) translate(0px, 0px)`;
+                });
+            }
+        });
+    </script>
+
+<div id="svg-sprite-container" style="display: none;"></div>
+<script>
+    fetch('assets/icons.svg')
+        .then(response => response.text())
+        .then(svg => document.getElementById('svg-sprite-container').innerHTML = svg);
+</script>
+<script defer src="js/main.min.js"></script>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to Top" class="scroll-to-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+<div class="fab-wrap" id="fabWrap">
+  <a href="https://wa.me/919876543210" target="_blank" class="fab-item" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.72 13.44L4 20l2.65-.7a8.9 8.9 0 0 0 5.4 1.82h.01A8.94 8.94 0 0 0 20 12.14a8.86 8.86 0 0 0-2.4-5.82Zm-5.55 13.7h-.01a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.74.75-2.73-.18-.28a7.44 7.44 0 0 1 11.65-9.2 7.36 7.36 0 0 1 2 5.06 7.44 7.44 0 0 1-7.36 7.6Zm4.08-5.55c-.22-.11-1.32-.65-1.53-.73-.2-.08-.35-.11-.5.11-.15.22-.58.73-.71.88-.13.15-.26.16-.48.05a6.1 6.1 0 0 1-1.8-1.1 6.7 6.7 0 0 1-1.24-1.54c-.13-.22 0-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.4-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31.11.15 1.57 2.4 3.8 3.36.53.23.94.37 1.27.47.53.17 1.01.14 1.4.09.43-.06 1.32-.54 1.5-1.06.19-.52.19-.96.13-1.06-.05-.09-.2-.15-.42-.26Z"/></svg>
+  </a>
+  <a href="tel:+919876543210" class="fab-item" aria-label="Call">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  </a>
+  <a href="https://maps.google.com/" target="_blank" class="fab-item" aria-label="Location">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+  </a>
+  <a href="contact.html" class="fab-item" aria-label="Enquiry Form">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+  </a>
+  <button class="fab" id="fabBtn" aria-label="Toggle quick actions" aria-expanded="false">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2Z"/>
+      <path d="m22 6-10 7L2 6"/>
+    </svg>
+  </button>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/fab-menu.js"></script>
+</body></html>
+

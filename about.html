@@ -92,7 +92,7 @@
                     <ul class="nav-links">
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="about.html">ABOUT</a></li>
-
+                        <li><a href="products.html">PRODUCTS</a></li>
                         <li><a href="certifications.html">CERTIFICATIONS</a></li>
                         <li><a href="#">CAREERS</a></li>
                         <li><a href="#">NEWS & EVENTS</a></li>
@@ -189,10 +189,11 @@
             .horizontal-scroll-container {
                 display: flex;
                 overflow-x: auto;
-                padding-bottom: 40px;
+                padding-bottom: 20px;
                 padding-top: 20px;
                 gap: 25px;
                 scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
             }
             .horizontal-scroll-container .strength-card {
                 flex: 0 0 350px;
@@ -200,13 +201,58 @@
                 background-color: #fff;
                 margin: 0;
                 border-radius: 12px;
-                padding: 30px;
+                padding: 30px 30px 40px 30px;
                 box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-                transition: box-shadow 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
                 border: 1px solid rgba(0,0,0,0.05);
+                border-top: 4px solid var(--color-accent);
+                display: flex;
+                flex-direction: column;
             }
             .horizontal-scroll-container .strength-card:hover {
                 box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                transform: translateY(-8px);
+            }
+            .horizontal-scroll-container .icon-wrap {
+                width: 60px;
+                height: 60px;
+                background-color: rgba(93, 149, 48, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+                color: var(--color-accent);
+            }
+            .horizontal-scroll-container .icon-wrap svg {
+                width: 28px;
+                height: 28px;
+            }
+            .scroll-controls {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+            }
+            .scroll-btn {
+                background-color: #fff;
+                border: 1px solid #e5e7eb;
+                border-radius: 50%;
+                width: 48px;
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                color: #4b5563;
+                transition: all 0.2s ease;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+            .scroll-btn:hover {
+                background-color: var(--color-accent);
+                color: #fff;
+                border-color: var(--color-accent);
+                transform: scale(1.05);
             }
             @media (max-width: 768px) {
                 .horizontal-scroll-container .strength-card {
@@ -215,32 +261,63 @@
             }
             </style>
 
-            <div class="horizontal-scroll-container hide-scroll-bar fade-in-up delay-1">
+            <div id="why-choose-scroll" class="horizontal-scroll-container hide-scroll-bar fade-in-up delay-1">
                 <div class="strength-card">
                     <div class="icon-wrap"><svg><use href="#icon-leaf"></use></svg></div>
-                    <h3>Direct Farm Sourcing</h3>
-                    <p>We work directly with farmers across Gujarat's key onion-growing belts, eliminating middlemen from the supply chain. This direct relationship ensures fair pricing for farmers and consistent quality at the source. It also means every batch can be traced back to the fields it came from.</p>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 15px;">Direct Farm Sourcing</h3>
+                    <p style="color: #4b5563; line-height: 1.6; margin: 0;">We work directly with farmers across Gujarat's key onion-growing belts, eliminating middlemen from the supply chain. This direct relationship ensures fair pricing for farmers and consistent quality at the source. It also means every batch can be traced back to the fields it came from.</p>
                 </div>
                 <div class="strength-card">
                     <div class="icon-wrap"><svg><use href="#icon-cog"></use></svg></div>
-                    <h3>Consistent Quality</h3>
-                    <p>Every batch of onion powder undergoes rigorous testing for moisture content, particle size, color, and microbial safety before it's cleared for packaging. This standardized process is applied uniformly, batch after batch. The result is a product manufacturers and distributors can rely on to perform the same way every time.</p>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 15px;">Consistent Quality</h3>
+                    <p style="color: #4b5563; line-height: 1.6; margin: 0;">Every batch of onion powder undergoes rigorous testing for moisture content, particle size, color, and microbial safety before it's cleared for packaging. This standardized process is applied uniformly, batch after batch. The result is a product manufacturers and distributors can rely on to perform the same way every time.</p>
                 </div>
                 <div class="strength-card">
                     <div class="icon-wrap"><svg><use href="#icon-shield"></use></svg></div>
-                    <h3>Global Export Readiness</h3>
-                    <p>Our packaging meets international food-grade standards, built for the demands of cross-border trade. From processing through to export, every step is designed with global compliance in mind. Whether the destination is a food manufacturer, spice blender, or distributor, the product arrives ready for their supply chain.</p>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 15px;">Global Export Readiness</h3>
+                    <p style="color: #4b5563; line-height: 1.6; margin: 0;">Our packaging meets international food-grade standards, built for the demands of cross-border trade. From processing through to export, every step is designed with global compliance in mind. Whether the destination is a food manufacturer, spice blender, or distributor, the product arrives ready for their supply chain.</p>
                 </div>
                 <div class="strength-card">
                     <div class="icon-wrap"><svg><use href="#icon-star"></use></svg></div>
-                    <h3>Customizable Solutions</h3>
-                    <p>We offer flexibility across bulk packaging, private labeling, and tailored specifications to match different business needs. Whether a customer needs large-volume bulk supply or a private-label retail product, our process adapts accordingly. This customization is built into how we package and export, not an afterthought.</p>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 15px;">Customizable Solutions</h3>
+                    <p style="color: #4b5563; line-height: 1.6; margin: 0;">We offer flexibility across bulk packaging, private labeling, and tailored specifications to match different business needs. Whether a customer needs large-volume bulk supply or a private-label retail product, our process adapts accordingly. This customization is built into how we package and export, not an afterthought.</p>
                 </div>
                 <div class="strength-card">
                     <div class="icon-wrap"><svg><use href="#icon-price"></use></svg></div>
-                    <h3>Rooted in Tradition</h3>
-                    <p>Girnari Export takes its name from the Girnar region, known for its fertile soil and generations of farming wisdom. That heritage of cultivation knowledge is carried through into every stage of our process today. We combine this traditional agricultural foundation with modern export practices to bring authentic Gujarati produce to global markets.</p>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 15px;">Rooted in Tradition</h3>
+                    <p style="color: #4b5563; line-height: 1.6; margin: 0;">Girnari Export takes its name from the Girnar region, known for its fertile soil and generations of farming wisdom. That heritage of cultivation knowledge is carried through into every stage of our process today. We combine this traditional agricultural foundation with modern export practices to bring authentic Gujarati produce to global markets.</p>
                 </div>
+            </div>
+
+            <script>
+            function scrollWhyChoose(direction) {
+                const container = document.getElementById('why-choose-scroll');
+                const scrollAmount = 375; // Card width + gap
+                
+                if (direction === 1) { // Next
+                    // If at the end, rewind to start
+                    if (Math.ceil(container.scrollLeft + container.clientWidth) >= container.scrollWidth - 10) {
+                        container.scrollTo({left: 0, behavior: 'smooth'});
+                    } else {
+                        container.scrollBy({left: scrollAmount, behavior: 'smooth'});
+                    }
+                } else { // Prev
+                    // If at the start, skip to end
+                    if (container.scrollLeft <= 10) {
+                        container.scrollTo({left: container.scrollWidth, behavior: 'smooth'});
+                    } else {
+                        container.scrollBy({left: -scrollAmount, behavior: 'smooth'});
+                    }
+                }
+            }
+            </script>
+            <div class="scroll-controls fade-in-up delay-2">
+                <button class="scroll-btn prev-btn" aria-label="Previous" onclick="scrollWhyChoose(-1)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button class="scroll-btn next-btn" aria-label="Next" onclick="scrollWhyChoose(1)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
             </div>
         </div>
     </section>
@@ -313,9 +390,9 @@
             <div class="footer-col">
                 <h3>Explore</h3>
                 <ul class="footer-list">
-                    <li>Dehydrated White Onions</li>
-                    <li>Dehydrated Pink Onions</li>
-                    <li>Dehydrated Red Onions</li>
+                    <li><a href="white-onion-powder.html">Dehydrated White Onions</a></li>
+                    <li><a href="pink-onion-powder.html">Dehydrated Pink Onions</a></li>
+                    <li><a href="red-onion-powder.html">Dehydrated Red Onions</a></li>
                     <li>Fried Onion</li>
                     <li>Dehydrated Garlic</li>
                     <li>Fried Garlic</li>

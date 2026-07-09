@@ -732,6 +732,62 @@ img {
 /* ==========================================================================
    Certifications Section
    ========================================================================== */
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+.intro-content p {
+    color: #555;
+}
+.intro-features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(93, 149, 48, 0.08);
+}
+.feature-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(93, 149, 48, 0.1);
+    color: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.feature-item h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+.feature-item p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #666;
+}
+
 .cert-grid {
     display: flex;
     flex-wrap: wrap;
@@ -756,21 +812,23 @@ img {
 
 .cert-card {
     background: #FFFFFF;
-    border-radius: 8px;
-    padding: 30px 20px 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border-radius: 12px;
+    padding: 25px 20px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 220px;
-    height: 180px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 235px;
+    height: 200px;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .cert-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(93, 149, 48, 0.12);
+    border-color: rgba(93, 149, 48, 0.2);
 }
 
 .cert-card-img-wrapper {

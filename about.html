@@ -52,7 +52,7 @@
     <!-- Styles and Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -144,7 +144,7 @@
                         <p style="color: var(--color-text); font-size: 1.1rem; line-height: 1.8; margin-bottom: 0;">What started as a vision to showcase authentic Gujarati produce has grown into a dedicated export business, built on direct farmer relationships, rigorous processing standards, and an unwavering commitment to purity.</p>
                     </div>
                     <div style="flex: 1 1 400px; min-height: 400px; position: relative;">
-                        <img src="images/gallery_1.webp" alt="Girnar farming fields" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/products/premium.webp" alt="Girnar farming fields" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
                     </div>
                 </div>
             </div>
@@ -157,7 +157,7 @@
             <div class="fade-in-up delay-1 mx-auto" style="max-width: 1100px; background-color: var(--color-primary-bg); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(93, 149, 48, 0.1);">
                 <div style="display: flex; flex-wrap: wrap; align-items: stretch;">
                     <div style="flex: 1 1 400px; min-height: 400px; position: relative;">
-                        <img src="images/gallery_2.webp" alt="Girnari Export Processing" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                        <img src="images/products/organic.webp" alt="Girnari Export Processing" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div style="flex: 1 1 500px; padding: 60px 50px; display: flex; flex-direction: column; justify-content: center;">
                         <span style="color: var(--color-accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 15px; display: block;">Our Expertise</span>
@@ -171,51 +171,76 @@
     </section>
 
     <!-- Why Choose Section -->
-    <section class="section strengths-section">
+    <section class="section strengths-section" style="background-color: #ffffff; padding-top: 100px; padding-bottom: 100px;">
         <div class="container">
-            <div class="section-header text-center fade-in-up">
-                <h2>Why Choose Girnari Export</h2>
+            <div class="section-header text-center fade-in-up" style="margin-bottom: 40px;">
+                <h2 style="font-size: 2.5rem; font-weight: 400; color: #333;">WHY CHOOSE GIRNARI EXPORT</h2>
                 <p>Delivering on the promise of quality and consistency.</p>
             </div>
             
-            <div class="why-choose-gallery">
-                <div class="why-choose-cards">
-                    <div class="strength-card">
-                        <div class="icon-wrap"><svg><use href="#icon-leaf"></use></svg></div>
-                        <h3>Direct Farm Sourcing</h3>
-                        <p>We work directly with farmers across Gujarat's key onion-growing belts, eliminating middlemen from the supply chain. This direct relationship ensures fair pricing for farmers and consistent quality at the source. It also means every batch can be traced back to the fields it came from.</p>
-                    </div>
-                    <div class="strength-card">
-                        <div class="icon-wrap"><svg><use href="#icon-cog"></use></svg></div>
-                        <h3>Consistent Quality</h3>
-                        <p>Every batch of onion powder undergoes rigorous testing for moisture content, particle size, color, and microbial safety before it's cleared for packaging. This standardized process is applied uniformly, batch after batch. The result is a product manufacturers and distributors can rely on to perform the same way every time.</p>
-                    </div>
-                    <div class="strength-card">
-                        <div class="icon-wrap"><svg><use href="#icon-shield"></use></svg></div>
-                        <h3>Global Export Readiness</h3>
-                        <p>Our packaging meets international food-grade standards, built for the demands of cross-border trade. From processing through to export, every step is designed with global compliance in mind. Whether the destination is a food manufacturer, spice blender, or distributor, the product arrives ready for their supply chain.</p>
-                    </div>
-                    <div class="strength-card">
-                        <div class="icon-wrap"><svg><use href="#icon-star"></use></svg></div>
-                        <h3>Customizable Solutions</h3>
-                        <p>We offer flexibility across bulk packaging, private labeling, and tailored specifications to match different business needs. Whether a customer needs large-volume bulk supply or a private-label retail product, our process adapts accordingly. This customization is built into how we package and export, not an afterthought.</p>
-                    </div>
-                    <div class="strength-card">
-                        <div class="icon-wrap"><svg><use href="#icon-price"></use></svg></div>
-                        <h3>Rooted in Tradition</h3>
-                        <p>Girnari Export takes its name from the Girnar region, known for its fertile soil and generations of farming wisdom. That heritage of cultivation knowledge is carried through into every stage of our process today. We combine this traditional agricultural foundation with modern export practices to bring authentic Gujarati produce to global markets.</p>
-                    </div>
+            <style>
+            .hide-scroll-bar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .hide-scroll-bar::-webkit-scrollbar {
+                display: none;
+            }
+            .horizontal-scroll-container {
+                display: flex;
+                overflow-x: auto;
+                padding-bottom: 40px;
+                padding-top: 20px;
+                gap: 25px;
+                scroll-snap-type: x mandatory;
+            }
+            .horizontal-scroll-container .strength-card {
+                flex: 0 0 350px;
+                scroll-snap-align: start;
+                background-color: #fff;
+                margin: 0;
+                border-radius: 12px;
+                padding: 30px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+                transition: box-shadow 0.3s ease-in-out;
+                border: 1px solid rgba(0,0,0,0.05);
+            }
+            .horizontal-scroll-container .strength-card:hover {
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            @media (max-width: 768px) {
+                .horizontal-scroll-container .strength-card {
+                    flex: 0 0 280px;
+                }
+            }
+            </style>
+
+            <div class="horizontal-scroll-container hide-scroll-bar fade-in-up delay-1">
+                <div class="strength-card">
+                    <div class="icon-wrap"><svg><use href="#icon-leaf"></use></svg></div>
+                    <h3>Direct Farm Sourcing</h3>
+                    <p>We work directly with farmers across Gujarat's key onion-growing belts, eliminating middlemen from the supply chain. This direct relationship ensures fair pricing for farmers and consistent quality at the source. It also means every batch can be traced back to the fields it came from.</p>
                 </div>
-                <div class="drag-proxy"></div>
-            </div>
-            
-            <div class="why-choose-nav">
-                <button class="wc-nav-btn wc-prev" aria-label="Previous card">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-                </button>
-                <button class="wc-nav-btn wc-next" aria-label="Next card">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-                </button>
+                <div class="strength-card">
+                    <div class="icon-wrap"><svg><use href="#icon-cog"></use></svg></div>
+                    <h3>Consistent Quality</h3>
+                    <p>Every batch of onion powder undergoes rigorous testing for moisture content, particle size, color, and microbial safety before it's cleared for packaging. This standardized process is applied uniformly, batch after batch. The result is a product manufacturers and distributors can rely on to perform the same way every time.</p>
+                </div>
+                <div class="strength-card">
+                    <div class="icon-wrap"><svg><use href="#icon-shield"></use></svg></div>
+                    <h3>Global Export Readiness</h3>
+                    <p>Our packaging meets international food-grade standards, built for the demands of cross-border trade. From processing through to export, every step is designed with global compliance in mind. Whether the destination is a food manufacturer, spice blender, or distributor, the product arrives ready for their supply chain.</p>
+                </div>
+                <div class="strength-card">
+                    <div class="icon-wrap"><svg><use href="#icon-star"></use></svg></div>
+                    <h3>Customizable Solutions</h3>
+                    <p>We offer flexibility across bulk packaging, private labeling, and tailored specifications to match different business needs. Whether a customer needs large-volume bulk supply or a private-label retail product, our process adapts accordingly. This customization is built into how we package and export, not an afterthought.</p>
+                </div>
+                <div class="strength-card">
+                    <div class="icon-wrap"><svg><use href="#icon-price"></use></svg></div>
+                    <h3>Rooted in Tradition</h3>
+                    <p>Girnari Export takes its name from the Girnar region, known for its fertile soil and generations of farming wisdom. That heritage of cultivation knowledge is carried through into every stage of our process today. We combine this traditional agricultural foundation with modern export practices to bring authentic Gujarati produce to global markets.</p>
+                </div>
             </div>
         </div>
     </section>
